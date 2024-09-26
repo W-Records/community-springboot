@@ -1,0 +1,77 @@
+**/application-secrets.yml
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# OS X, Linux, and Android
+.DS_Store
+*.swp
+.svn
+*.bak
+*~
+.classpath
+.project
+.settings/
+target/
+bin/
+logs/
+.idea/
+
+# Eclipse
+eclipse/
+*.launch
+*.jar
+
+# IntelliJ IDEA
+.idea/
+*.iml
+out/
+libexec/
+
+# Maven
+.taget/
+.m2/
+dependency-reduced-pom.xml
+
+# Gradle
+.gradle/
+build/
+*.gradle
+
+# Node.js
+node_modules/
+npm-debug.log
+
+# Spring Boot DevTools
+/.mvn
+/mvnw
+/mvnw.cmd
+/target/
+
+# Docker
+.dockerenv
+
+# VirtualBox
+/VirtualBox VMs
+
+# Kubernetes
+.kube
+
+# Terraform
+.tfstate*
+
+# AWS
+.aws
+
+# Google Cloud Platform
+.gcloud
+
+# Azure
+.vscode
+
+# JetBrains
+# Comment out if you want to ignore all JetBrains IDE files
+#JetBrains/*
+
+# Add custom exclusions here

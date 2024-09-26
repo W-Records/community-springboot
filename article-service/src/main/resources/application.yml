@@ -1,0 +1,51 @@
+server:
+  port: 8082
+spring:
+  config:
+    import: ./application-secrets.yml
+  application:
+    name: ArticleService
+  cloud:
+    nacos:
+      server-addr: 192.168.229.1:8848
+  datasource:
+    url: jdbc:mysql://localhost:3306/my_juejin_cloud_project
+    username: root
+    password: wpj666999
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  servlet:
+    multipart:
+      max-file-size: 1024MB
+      max-request-size: 1024MB
+  data:
+    redis:
+      host: 127.0.0.1
+      port: 6379
+  kafka:
+    bootstrap-servers: 192.168.229.134:9092
+    producer:
+      retries: 10
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+    consumer:
+      group-id: my-first-kafka
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true
+token:
+  jwt:
+    signing-key: mySecretkey
+    expire: 36000000
+## OSS 参数配置
+
+#  KafkaStream
+kafka:
+  hosts: 192.168.229.134:9092
+  group: MyFirstKafkaStream
+
+#  elasticsearch
+elasticsearch:
+  host: http://192.168.229.134:9200

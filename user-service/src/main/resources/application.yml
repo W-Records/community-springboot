@@ -1,0 +1,21 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: UserService
+  cloud:
+    nacos:
+      server-addr: 192.168.229.1:8848
+  datasource:
+    url: jdbc:mysql://localhost:3306/my_juejin_cloud_project?useSSL=false
+    username: root
+    password: wpj666999
+    driver-class-name: com.mysql.cj.jdbc.Driver
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true
+token:
+  jwt:
+    signing-key: mySecretkey
+    expire: 36000000
